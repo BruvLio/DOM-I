@@ -40,3 +40,54 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+const navLinks = document.querySelectorAll("nav a");
+const ctaH1 = document.querySelector(".cta-text h1")
+const ctaButton = document.querySelector(".cta-text button")
+const textContentHeaders = document.querySelectorAll(".text-content h4")
+const textContentParagraphs = document.querySelectorAll(".text-content p")
+const contactSectionHeader = document.querySelector(".contact h4")
+const contactSectionParagraphs = document.querySelectorAll(".contact p")
+const footerSection = document.querySelector("footer a")
+const logoImg = document.querySelector(".logo")
+const ctaImg = document.querySelector("#cta-img")
+const accentImg = document.querySelector(".middle-img")
+
+
+navLinks[0].textContent = siteContent["nav"]["nav-item-1"]
+navLinks[1].textContent = siteContent["nav"]["nav-item-2"]
+navLinks[2].textContent = siteContent["nav"]["nav-item-3"]
+navLinks[3].textContent = siteContent["nav"]["nav-item-4"]
+navLinks[4].textContent = siteContent["nav"]["nav-item-5"]
+navLinks[5].textContent = siteContent["nav"]["nav-item-6"]
+
+navLinks.forEach(link => link.classList.add("italic"))
+
+ctaH1.textContent = siteContent["cta"]["h1"]
+ctaButton.textContent = siteContent["cta"]["button"]
+
+textContentHeaders[0].textContent = siteContent["main-content"]["features-h4"]
+textContentHeaders[1].textContent = siteContent["main-content"]["about-h4"]
+textContentHeaders[2].textContent = siteContent["main-content"]["services-h4"]
+textContentHeaders[3].textContent = siteContent["main-content"]["product-h4"]
+textContentHeaders[4].textContent = siteContent["main-content"]["vision-h4"]
+
+
+textContentParagraphs[0].textContent = siteContent["main-content"]["features-content"]
+textContentParagraphs[1].textContent = siteContent["main-content"]["about-content"]
+textContentParagraphs[2].textContent = siteContent["main-content"]["services-content"]
+textContentParagraphs[3].textContent = siteContent["main-content"]["product-content"]
+textContentParagraphs[4].textContent = siteContent["main-content"]["vision-content"]
+
+contactSectionHeader.textContent = siteContent["contact"]["contact-h4"]
+contactSectionParagraphs[0].textContent = siteContent["contact"]["address"]
+contactSectionParagraphs[1].textContent = siteContent["contact"]["phone"]
+contactSectionParagraphs[2].textContent = siteContent["contact"]["email"]
+
+footerSection.textContent = siteContent["footer"]["copyright"]
+
+footerSection.classList.add("bold")
+
+logoImg.src = "http://localhost:9000/img/logo.png";
+ctaImg.src = "http://localhost:9000/img/cta.png";
+accentImg.src = "http://localhost:9000/img/accent.png";
